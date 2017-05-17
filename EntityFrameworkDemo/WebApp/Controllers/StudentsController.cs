@@ -52,8 +52,20 @@ namespace WebApp.Controllers
         {
             if (ModelState.IsValid)
             {
-                db.Students.Add(student);
-                db.SaveChanges();
+                using (DbContextTransaction tran = db.Database.BeginTransaction())
+                {
+                    try
+                    {
+                        db.Students.Add(student);
+                        db.SaveChanges();
+                        tran.Commit();
+                    }
+                    catch (Exception)
+                    {
+                        tran.Rollback();
+                    }
+                }
+                
                 return RedirectToAction("Index");
             }
 

@@ -21,6 +21,10 @@ namespace WebApp.Data
                 .Properties()
                 .Where(p => p.Name == p.DeclaringType.Name + "_ID")
                 .Configure(p => p.IsKey());
+            
+            //using convention
+            //modelBuilder.Conventions.Add<PkConvention>();
+
 
             //Configure RowVersion property as Concurrency token
             modelBuilder.Properties()
