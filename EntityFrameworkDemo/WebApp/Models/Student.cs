@@ -3,7 +3,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace WebApp.Models
 {
-    class Student
+    public class Student
     {
         public Student()
         {
@@ -17,6 +17,8 @@ namespace WebApp.Models
 
         [Timestamp]
         public byte[] RowVersion { get; set; }
+
+        public System.DateTime AddmissionDate { get; set; }
 
     }
 }

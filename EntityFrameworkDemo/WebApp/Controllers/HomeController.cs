@@ -18,6 +18,7 @@ namespace WebApp.Controllers
         {
             return View();
         }
+        
 
         public JsonResult GetStudents()
         {

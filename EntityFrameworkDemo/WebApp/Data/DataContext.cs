@@ -7,7 +7,7 @@ namespace WebApp.Data
     class DataContext : DbContext
     {
         public DataContext()
-            : base()
+            : base("StudentsDb")
         {
         }
         public DbSet<Student> Students { get; set; }
