@@ -5,6 +5,7 @@ using System.Data.Entity;
 using System.Data.Entity.Infrastructure;
 using System.Linq;
 using System.Net;
+using System.Threading.Tasks;
 using System.Web;
 using System.Web.Mvc;
 using WebApp.Data;
@@ -20,6 +21,11 @@ namespace WebApp.Controllers
         public ActionResult Index()
         {
             return View(db.Students.ToList());
+        }
+
+        public async Task<ActionResult> Index2()
+        {
+            return View(await db.Students.ToListAsync());
         }
 
         // GET: Students/Details/5

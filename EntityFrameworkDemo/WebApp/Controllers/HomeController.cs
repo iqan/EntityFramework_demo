@@ -31,14 +31,14 @@ namespace WebApp.Controllers
                 db.Database.Log = SignalR.LogHub.Send;
                 try
                 {
-                    //var s = new List<Student> {
-                    //    new Student { StudentName = "abc", RegistrationNumber = 1, RowVersion = new byte[1]},
-                    //    new Student { StudentName = "abc1", RegistrationNumber = 2, RowVersion = new byte[1]},
-                    //    new Student { StudentName = "abc2", RegistrationNumber = 3, RowVersion = new byte[1]},
-                    //    new Student { StudentName = "abc3", RegistrationNumber = 4, RowVersion = new byte[1]},
-                    //};
-                    //db.Students.AddRange(s);
-                    //db.SaveChanges();
+                    var s = new List<Student> {
+                        new Student { StudentName = "abc", RegistrationNumber = 1, RowVersion = new byte[1]},
+                        new Student { StudentName = "abc1", RegistrationNumber = 2, RowVersion = new byte[1]},
+                        new Student { StudentName = "abc2", RegistrationNumber = 3, RowVersion = new byte[1]},
+                        new Student { StudentName = "abc3", RegistrationNumber = 4, RowVersion = new byte[1]},
+                    };
+                    db.Students.AddRange(s);
+                    db.SaveChanges();
                     students = db.Students.ToList();
                 }
                 catch (System.Exception e)

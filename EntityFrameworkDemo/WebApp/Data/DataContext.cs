@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Data.Entity;
+using System.Data.Entity.ModelConfiguration.Conventions;
 using WebApp.Models;
 
 namespace WebApp.Data
@@ -9,6 +10,7 @@ namespace WebApp.Data
         public DataContext()
             : base("StudentsDb")
         {
+            
         }
         public DbSet<Student> Students { get; set; }
         public DbSet<Standard> Standards { get; set; }
@@ -51,6 +53,18 @@ namespace WebApp.Data
             //modelBuilder.Types().Configure(t => t.MapToStoredProcedures());
 
             base.OnModelCreating(modelBuilder);
+        }
+
+        
+    }
+
+    public class PkConvention : Convention
+    {
+        public PkConvention()
+        {
+            this.Properties()
+            .Where(p => p.Name == p.DeclaringType.Name + "_ID")
+            .Configure(p => p.IsKey());
         }
     }
 }
