@@ -5,7 +5,7 @@ using WebApp.Models;
 
 namespace WebApp.Data
 {
-    
+    // new comment
     class DataContext : DbContext
     {
         public DataContext()
