@@ -7,7 +7,6 @@ namespace EFCoreDemo.Data
     {
         public DataContext(DbContextOptions<DataContext> options) : base (options)
         {
-
         }
 
         public DbSet<tempUser> TempUser { get; set; }

@@ -1,15 +1,17 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
-VisualStudioVersion = 15.0.27130.2027
+VisualStudioVersion = 15.0.27130.2036
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebApp", "WebApp\WebApp.csproj", "{E1D47E80-C5A0-4ADB-91A6-F520D2EF4772}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "EFCore", "EFCore", "{7FEDD441-0C6E-4F2B-AE89-E3EE8B521B02}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EFCoreDemo", "EFCoreDemo\EFCoreDemo.csproj", "{C73DDD52-D11B-42C2-AF3E-99D429A8DBE5}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EFCoreDemo", "EFCoreDemo\EFCoreDemo.csproj", "{C73DDD52-D11B-42C2-AF3E-99D429A8DBE5}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EFCoreDemo.Data", "EFCoreDemo.Data\EFCoreDemo.Data.csproj", "{CE698EAC-A903-4DEC-8BE8-F7B68823FC98}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EFCoreDemo.Data", "EFCoreDemo.Data\EFCoreDemo.Data.csproj", "{CE698EAC-A903-4DEC-8BE8-F7B68823FC98}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EFCoreDemo.UnitTests", "EFCoreDemo.UnitTests\EFCoreDemo.UnitTests.csproj", "{6A67B319-E73A-4B90-A243-8D3884D97F03}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -29,6 +31,10 @@ Global
 		{CE698EAC-A903-4DEC-8BE8-F7B68823FC98}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{CE698EAC-A903-4DEC-8BE8-F7B68823FC98}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{CE698EAC-A903-4DEC-8BE8-F7B68823FC98}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6A67B319-E73A-4B90-A243-8D3884D97F03}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6A67B319-E73A-4B90-A243-8D3884D97F03}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6A67B319-E73A-4B90-A243-8D3884D97F03}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6A67B319-E73A-4B90-A243-8D3884D97F03}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -36,6 +42,7 @@ Global
 	GlobalSection(NestedProjects) = preSolution
 		{C73DDD52-D11B-42C2-AF3E-99D429A8DBE5} = {7FEDD441-0C6E-4F2B-AE89-E3EE8B521B02}
 		{CE698EAC-A903-4DEC-8BE8-F7B68823FC98} = {7FEDD441-0C6E-4F2B-AE89-E3EE8B521B02}
+		{6A67B319-E73A-4B90-A243-8D3884D97F03} = {7FEDD441-0C6E-4F2B-AE89-E3EE8B521B02}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {58A9FE86-30E6-49D2-B493-568DDF12DBBE}
